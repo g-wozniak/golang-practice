@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
+	var bookings = []string{"Steve"}
+
 	const conferenceTickets uint = 50
 	var remainingTickets uint = conferenceTickets
 	conferenceName := "GO Conference 2024"
@@ -22,6 +24,9 @@ func main() {
 
 	fmt.Printf("Thank you %v %v! Your ticket is booked!\n", firstName, lastName)
 	remainingTickets--
+	bookings = append(bookings, firstName)
+
+	fmt.Printf("List of guests: %v\n", bookings)
 	fmt.Printf("Remaining tickets: %v\n", remainingTickets)
 	
 }
